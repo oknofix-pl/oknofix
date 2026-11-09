@@ -72,6 +72,51 @@ header {
   object-fit: cover;
   border-radius: 12px;
 }
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 5%;
+  background: white;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #18365b;
+}
+
+.call-button {
+  display: inline-block;
+  background: #168fc2;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+
+  .header-contact {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
 
   </style>
 </head>
@@ -79,7 +124,12 @@ header {
 <body>
 
 <header>
-<img src="logo-new.png.png" alt="OknoFix" class="logo">
+  <img src="logo-new.png.png" alt="OknoFix" class="logo">
+
+  <div class="header-contact">
+    <span>+48 603 939 032</span>
+    <a href="tel:+48603939032" class="call-button">Zadzwoń</a>
+  </div>
 </header>
   <section class="hero">
   <h1>Profesjonalny serwis i naprawa okien we Wrocławiu i okolicach</h1>
