@@ -147,6 +147,38 @@ header {
   line-height: 1.6;
 }
     
+ 
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #102b50;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: #008cff;
+  border-bottom: 2px solid #008cff;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+}
+
   </style>
 </head>
 
@@ -155,17 +187,27 @@ header {
 <header>
   <img src="logo-new.png.png" alt="OknoFix" class="logo">
 
+ 
+<nav class="main-nav">
+  <a href="#home">Strona główna</a>
+  <a href="#services">Usługi</a>
+  <a href="#prices">Cennik</a>
+  <a href="#reviews">Opinie</a>
+  <a href="#gallery">Nasze realizacje</a>
+  <a href="#contact">Kontakt</a>
+</nav>
+
   <div class="header-contact">
     <span>+48 603 939 032</span>
     <a href="tel:+48603939032" class="call-button">Zadzwoń</a>
   </div>
 </header>
-  <section class="hero">
+<section class="hero" id="home">
   <h1>Profesjonalny serwis i naprawa okien we Wrocławiu i okolicach</h1>
 <p>Nie zawsze trzeba wymieniać całe okno – w większości przypadków wystarczy profesjonalny serwis!</p>
 <a href="tel:+48603939032" class="hero-button">Umów serwis</a>
   </section>
-<section class="services">
+<section class="services" id="services">
   <h2>Nasze usługi</h2>
   
 <div class="service-card">
