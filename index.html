@@ -418,6 +418,47 @@ html {
 .reviews a:hover {
   background: #0b6fa5;
 }
+
+.section-photo-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefits .section-photo-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 280px);
+}
+
+.benefits .benefits-grid {
+  margin: 0;
+}
+
+.section-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+
+.benefits .section-photo {
+  max-width: 280px;
+}
+
+@media (max-width: 760px) {
+  .section-photo-layout,
+  .benefits .section-photo-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .contact .section-photo {
+    max-width: 560px;
+  }
+}
   </style>
 </head>
 
@@ -533,31 +574,34 @@ html {
   <section class="benefits">
   <h2>Dlaczego warto wybrać OknoFix?</h2>
   
-<div class="benefits-grid">
-  <div class="benefit-card">
-    <span>🔧</span>
-    <h3>Profesjonalny serwis</h3>
-    <p>Naprawa zamiast kosztownej wymiany okien</p>
-  </div>
+  <div class="section-photo-layout">
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span>🔧</span>
+        <h3>Profesjonalny serwis</h3>
+        <p>Naprawa zamiast kosztownej wymiany okien</p>
+      </div>
 
-  <div class="benefit-card">
-    <span>🏆</span>
-    <h3>Ponad 5000 naprawionych okien</h3>
-    <p>Doświadczenie i fachowa obsługa</p>
-  </div>
+      <div class="benefit-card">
+        <span>🏆</span>
+        <h3>Ponad 5000 naprawionych okien</h3>
+        <p>Doświadczenie i fachowa obsługa</p>
+      </div>
 
-  <div class="benefit-card">
-    <span>🛡️</span>
-    <h3>Gwarancja na usługi</h3>
-    <p>Gwarancja na wykonane prace</p>
-  </div>
+      <div class="benefit-card">
+        <span>🛡️</span>
+        <h3>Gwarancja na usługi</h3>
+        <p>Gwarancja na wykonane prace</p>
+      </div>
 
-  <div class="benefit-card">
-    <span>📍</span>
-    <h3>Wrocław i okolice</h3>
-    <p>Dojeżdżamy do klientów w promieniu 40 km</p>
+      <div class="benefit-card">
+        <span>📍</span>
+        <h3>Wrocław i okolice</h3>
+        <p>Dojeżdżamy do klientów w promieniu 40 km</p>
+      </div>
+    </div>
+    <img class="section-photo" src="oknofix-naprawa-okna.jpg" alt="Serwisant naprawia okucie otwartego okna" width="1024" height="1536" loading="lazy" decoding="async">
   </div>
-</div>
 
 </section>
 <section class="gallery" id="producenci">
@@ -693,11 +737,15 @@ html {
 </div>
 </section>
 <section class="contact" id="contact">
-
-  <h2>Masz problem z oknem?</h2>
-  <h3>Pomożemy Ci go rozwiązać!</h3>
-  <p>Skontaktuj się z nami i umów profesjonalny serwis okien oraz drzwi balkonowych we Wrocławiu i okolicach.</p>
-  <a href="tel:+48603939032">Zadzwoń: +48 603 939 032</a>
+  <div class="section-photo-layout">
+    <div>
+      <h2>Masz problem z oknem?</h2>
+      <h3>Pomożemy Ci go rozwiązać!</h3>
+      <p>Skontaktuj się z nami i umów profesjonalny serwis okien oraz drzwi balkonowych we Wrocławiu i okolicach.</p>
+      <a href="tel:+48603939032">Zadzwoń: +48 603 939 032</a>
+    </div>
+    <img class="section-photo" src="oknofix-wizyta-serwisowa.jpg" alt="Serwisant rozmawia z klientką przy oknie" width="1536" height="1024" loading="lazy" decoding="async">
+  </div>
 </section> 
 </body>
 </html>
