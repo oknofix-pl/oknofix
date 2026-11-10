@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="470" viewBox="0 0 1440 470">
+  <title>Kontury czterech kształtów okien</title>
+  <g fill="none" stroke="#77afd8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" opacity=".66">
+    <g id="okno-lukowe" transform="translate(42 39) rotate(-8 85 66)">
+      <path d="M6 125V33Q85-7 164 33V125Z"/>
+      <path d="M13 118V38Q85 2 157 38V118Z"/>
+      <path d="M81 21V118M89 21V118"/>
+      <path d="M37 30V118M60 25V118M111 25V118M133 30V118M13 61H81M89 61H157M13 81H81M89 81H157M13 101H81M89 101H157" stroke-width="1.2"/>
+    </g>
+    <g id="okno-trojkatne" transform="translate(82 275) rotate(7 65 61)">
+      <path d="M65 4 128 116H2Z"/>
+      <path d="M65 17 117 109H13Z"/>
+      <path d="M62 23V109M68 23V109"/>
+    </g>
+    <g id="okno-z-dolnym-polem" transform="translate(1232 64) rotate(8 70 60)">
+      <rect x="4" y="4" width="132" height="114" rx="1"/>
+      <rect x="11" y="11" width="118" height="100"/>
+      <path d="M11 79H129M11 85H129M67 11V79M73 11V79"/>
+    </g>
+    <g id="okno-ze-szprosami" transform="translate(1214 280) rotate(-7 76 59)">
+      <rect x="4" y="4" width="144" height="110" rx="1"/>
+      <rect x="11" y="11" width="130" height="96"/>
+      <path d="M72 11V107M80 11V107"/>
+      <path d="M41 11V107M111 11V107M11 59H72M80 59H141" stroke-width="1.2"/>
+    </g>
+  </g>
+</svg>
