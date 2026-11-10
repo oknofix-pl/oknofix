@@ -21,7 +21,9 @@ header {
   align-items: center;
   gap: 18px;
   padding: 8px 3%;
-  background: #fff;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201366%20110%22%3E%0A%3Cg%20fill%3D%22none%22%20stroke%3D%22%2386b9df%22%20stroke-width%3D%221.2%22%20opacity%3D%22.43%22%3E%0A%3Cg%20transform%3D%22translate%28215%20-15%29%20rotate%28-10%2050%2055%29%22%3E%0A%3Cpath%20d%3D%22M5%20105V27Q49%203%2093%2027V105Z%22%2F%3E%3Cpath%20d%3D%22M11%2099V31Q49%2011%2087%2031V99Z%22%2F%3E%0A%3Cpath%20d%3D%22M49%2021V99M11%2055H87M11%2076H87%22%2F%3E%0A%3C%2Fg%3E%0A%3Cg%20transform%3D%22translate%28985%20-20%29%20rotate%288%2045%2060%29%22%3E%0A%3Crect%20x%3D%224%22%20y%3D%229%22%20width%3D%2285%22%20height%3D%22108%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2210%22%20y%3D%2215%22%20width%3D%2273%22%20height%3D%2296%22%2F%3E%0A%3Cpath%20d%3D%22M45%2015V111M10%2062H83%22%2F%3E%0A%3C%2Fg%3E%0A%3Cg%20transform%3D%22translate%281294%2028%29%20rotate%2811%2048%2045%29%22%3E%0A%3Cpath%20d%3D%22M48%201%2096%2091H0Z%22%2F%3E%3Cpath%20d%3D%22M48%2011%2086%2085H10Z%22%2F%3E%3Cpath%20d%3D%22M48%2011V85%22%2F%3E%0A%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") center / cover no-repeat,
+    linear-gradient(105deg, #fbfdff, #e4f2fd);
+  border-bottom: 1px solid #c7def1;
   box-shadow: 0 2px 12px rgba(16, 43, 80, 0.08);
   position: sticky;
   top: 0;
@@ -33,11 +35,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.logo-link {
+  justify-self: start;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 .logo {
   display: block;
-  width: 220px;
+  width: 136px;
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
     .hero {
@@ -48,10 +57,10 @@ html {
 }
     .hero-layout {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: minmax(0, 1fr) 260px;
     align-items: center;
     gap: 40px;
-    max-width: 1100px;
+    max-width: 1160px;
     margin: 0 auto;
 }
     .hero-certificate img {
@@ -188,14 +197,14 @@ html {
   border-bottom: 2px solid #008cff;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   header {
     grid-template-columns: minmax(0, 1fr) auto;
     row-gap: 10px;
   }
 
   .logo {
-    width: 175px;
+    width: 132px;
   }
 
   .main-nav {
@@ -209,19 +218,19 @@ html {
     font-size: 14px;
   }
 
-  header .call-button {
+  .header-actions {
     grid-column: 2;
     grid-row: 1;
   }
 
   html {
-    scroll-padding-top: 145px;
+    scroll-padding-top: 164px;
   }
 }
 
 @media (max-width: 600px) {
   .logo {
-    width: 145px;
+    width: 120px;
   }
 
   .call-button-number {
@@ -631,31 +640,195 @@ html {
     background: #fff url("oknofix-ksztalty-okien.svg") center / contain no-repeat;
   }
 }
+
+
+.hero-services {
+  margin: 23px auto 0;
+}
+
+.hero .hero-services p {
+  margin: 0 0 12px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #d5edff;
+}
+
+.hero-services ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 710px;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.hero-services a {
+  display: block;
+  padding: 8px 11px;
+  border: 1px solid #668bac;
+  border-radius: 8px;
+  color: #f1f8ff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.hero-services a:hover,
+.hero-services a:focus-visible {
+  background: #1a4772;
+  border-color: #9ecbeb;
+}
+
+.services .service-card:target {
+  outline: 2px solid #0b6fa5;
+  outline-offset: 3px;
+}
+
+.contact-channels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.contact .contact-channels a {
+  padding: 10px 15px;
+  border: 1px solid #a9cde8;
+  background: #fff;
+  color: #102b50;
+  font-size: 16px;
+}
+
+.contact .contact-channels a:hover,
+.contact .contact-channels a:focus-visible {
+  background: #e2f2ff;
+  border-color: #0b6fa5;
+}
+
+.contact .contact-email {
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding: 8px 4px;
+  background: transparent;
+  color: #0b5f91;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact .contact-email:hover,
+.contact .contact-email:focus-visible {
+  background: transparent;
+  color: #102b50;
+}
+
+
+.header-actions {
+  display: grid;
+  justify-self: end;
+  justify-items: end;
+  gap: 6px;
+}
+
+.header-socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.header-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 29px;
+  box-sizing: border-box;
+  padding: 4px 6px;
+  border: 1px solid #bdd8ed;
+  border-radius: 7px;
+  background: #fff;
+  color: #102b50;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-socials a:hover,
+.header-socials a:focus-visible {
+  background: #e2f2ff;
+  border-color: #0b6fa5;
+}
+
+.header-social-whatsapp svg {
+  color: #12814c;
+}
+
+.header-social-messenger svg,
+.header-social-facebook svg {
+  color: #1768bb;
+}
+
+@media (max-width: 600px) {
+  .header-socials a {
+    width: 32px;
+    min-height: 32px;
+    padding: 4px;
+  }
+
+  .header-socials a span {
+    display: none;
+  }
+}
   </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo-new.png.png" alt="OknoFix" class="logo">
-
- 
-<nav class="main-nav">
-<a href="#">Strona główna</a>
-  <a href="#services">Usługi</a>
-  <a href="#prices">Cennik</a>
-  <a href="#reviews">Opinie</a>
-  <a href="#gallery">Nasze realizacje</a>
-  <a href="#contact">Kontakt</a>
-</nav>
-
-  <a href="tel:+48603939032" class="call-button" aria-label="Zadzwoń do OknoFix pod numer +48 603 939 032">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a14 14 0 0 1-7-7l2-2-2-5Z"/>
-    </svg>
-    <span class="call-button-number">+48 603 939 032</span>
-    <span class="call-button-label">Zadzwoń</span>
+  <a class="logo-link" href="#" aria-label="OknoFix – strona główna">
+    <img src="logo-new.png.png" alt="OknoFix" class="logo">
   </a>
+
+  <nav class="main-nav" aria-label="Menu główne">
+    <a href="#services">Usługi</a>
+    <a href="#prices">Cennik</a>
+    <a href="#reviews">Opinie</a>
+    <a href="#gallery">Realizacje</a>
+    <a href="#porady">Porady</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <div class="header-actions">
+    <a href="tel:+48603939032" class="call-button" aria-label="Zadzwoń do OknoFix pod numer +48 603 939 032">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a14 14 0 0 1-7-7l2-2-2-5Z"/>
+      </svg>
+      <span class="call-button-number">+48 603 939 032</span>
+      <span class="call-button-label">Zadzwoń</span>
+    </a>
+    <div class="header-socials" role="group" aria-label="Kontakt w mediach społecznościowych">
+      <a class="header-social-whatsapp" href="https://wa.me/48603939032" aria-label="WhatsApp OknoFix" title="WhatsApp">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17.6 3.7 21l3.7-1a8.3 8.3 0 1 0-2.4-2.4Z"/><path d="M9 8.3c.4 2.8 2 4.5 4.8 5.4l1.1-1.2 1.9 1c-.2 1.2-.9 1.7-2 1.6-3.9-.4-6.7-3.4-7-6.2-.1-.9.4-1.5 1.3-1.7Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <a class="header-social-messenger" href="https://m.me/OknoFix.Wroclaw" aria-label="Messenger OknoFix" title="Messenger">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 1 5 7.4L5.5 21v-3.6A8 8 0 0 1 4 12Z"/><path d="m7.7 13.9 3.6-4 2.6 2.2 2.4-2-3.6 4-2.6-2.2Z" fill="currentColor" stroke="none"/></svg>
+        <span>Messenger</span>
+      </a>
+      <a class="header-social-facebook" href="https://www.facebook.com/OknoFix.Wroclaw/" aria-label="Facebook OknoFix" title="Facebook">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M13 21V12h3m-6 0h3V9.2C13 7.7 14 7 15.4 7H17"/></svg>
+        <span>Facebook</span>
+      </a>
+    </div>
+  </div>
 </header>
 <section class="hero" id="home">
   <div class="hero-layout">
@@ -663,6 +836,20 @@ html {
   <h1>Profesjonalny serwis i naprawa okien we Wrocławiu i okolicach</h1>
 <p>Nie zawsze trzeba wymieniać całe okno – w większości przypadków wystarczy profesjonalny serwis!</p>
 <a href="tel:+48603939032" class="hero-button">Umów serwis</a>
+<div class="hero-services">
+  <p id="hero-services-title">Zakres usług</p>
+  <ul aria-labelledby="hero-services-title">
+    <li><a href="#usluga-regulacja">Regulacja okien i drzwi</a></li>
+    <li><a href="#usluga-okucia">Naprawa okuć</a></li>
+    <li><a href="#usluga-uszczelki">Wymiana uszczelek</a></li>
+    <li><a href="#usluga-uszczelnianie">Uszczelnianie okien</a></li>
+    <li><a href="#usluga-szyby">Wymiana szyb zespolonych</a></li>
+    <li><a href="#usluga-klamki">Wymiana klamek</a></li>
+    <li><a href="#usluga-nawiewniki">Montaż nawiewników</a></li>
+    <li><a href="#usluga-kierunek">Zmiana kierunku otwierania</a></li>
+    <li><a href="#usluga-przeciagi">Ograniczanie hałasu i przeciągów</a></li>
+  </ul>
+</div>
   </div>
 <div class="hero-certificate">
  <a href="certyfikat_winkhaus_oknofix_hd.jpg" target="_blank" rel="noopener">
@@ -674,57 +861,57 @@ html {
 <section class="services" id="services">
   <h2>Nasze usługi</h2>
   
-<div class="service-card">
+<div class="service-card" id="usluga-regulacja">
   <img src="regulacja.jpg" alt="Regulacja okien" class="service-img">
   <h3>Regulacja okien i drzwi PCV oraz drewnianych</h3>
   <p>Regulacja docisku, likwidacja przeciągów i prawidłowe działanie okuć.</p>
   <strong>Od 35 zł</strong>
 </div>
   
-<div class="service-card">
+<div class="service-card" id="usluga-okucia">
   <img src="serwis_okuc.jpg" alt="Serwis i naprawa okuć" class="service-img">
   <h3>Serwis i naprawa okuć</h3>
   <p>Naprawa mechanizmów okiennych, wymiana uszkodzonych elementów okuć oraz przywracanie prawidłowego działania okien.</p>
   <strong>Cena po oględzinach</strong>
 </div>
 
-<div class="service-card">
+<div class="service-card" id="usluga-kierunek">
   <img src="zmiana_kierunku.jpg" alt="Zmiana kierunku otwierania okien" class="service-img">
   <h3>Zmiana kierunku otwierania okien i drzwi</h3>
   <p>Zmiana strony otwierania skrzydła okiennego lub drzwiowego.</p>
   <strong>Cena po oględzinach</strong>
 </div>
-  <div class="service-card">
+  <div class="service-card" id="usluga-uszczelnianie">
   <img src="uszczelnianie.jpg" alt="Uszczelnianie okien" class="service-img">
   <h3>Uszczelnienie okien i drzwi balkonowych</h3>
   <p>Usuwanie nieszczelności, przeciągów i poprawa izolacji termicznej.</p>
   <strong>Cena po oględzinach</strong>
 </div>
-<div class="service-card">
+<div class="service-card" id="usluga-szyby">
   <img src="wymiana_szyb.jpg" alt="Wymiana szyb zespolonych" class="service-img">
   <h3>Wymiana szyb zespolonych</h3>
   <p>Demontaż starego pakietu, montaż nowego oraz utylizacja starej szyby.</p>
   <strong>Od 350 zł + koszt szyby</strong>
 </div>
-<div class="service-card">
+<div class="service-card" id="usluga-klamki">
   <img src="wymiana_klamek.jpg" alt="Wymiana klamek" class="service-img">
   <h3>Wymiana klamek</h3>
   <p>Montaż nowych klamek do okien i drzwi PCV oraz drewnianych.</p>
   <strong>Od 40 zł</strong>
 </div>
-  <div class="service-card">
+  <div class="service-card" id="usluga-uszczelki">
 <img src="oknofix-uszczelki-gumowe-qlon.jpg" alt="Wymiana uszczelek" class="service-img">
   <h3>Wymiana uszczelek</h3>
   <p>Nowe uszczelki do okien i drzwi PCV oraz drewnianych. Poprawa szczelności i komfortu.</p>
   <strong>Od 20 zł/mb</strong>
 </div>
-  <div class="service-card">
+  <div class="service-card" id="usluga-nawiewniki">
   <img src="montaz_nawiewnikow.jpg" alt="Montaż nawiewników okiennych" class="service-img">
   <h3>Montaż nawiewników okiennych</h3>
   <p>Zapewniają stałą wentylację, świeże powietrze i mniej wilgoci w pomieszczeniach.</p>
   <strong>Od 100 zł</strong>
 </div>
-  <div class="service-card">
+  <div class="service-card" id="usluga-przeciagi">
   <img src="halas_przeciagi.jpg" alt="Ograniczanie hałasu i przeciągów" class="service-img">
   <h3>Ograniczanie hałasu i przeciągów</h3>
   <p>Poprawa izolacji akustycznej i termicznej okien. Likwidacja nieszczelności.</p>
@@ -965,6 +1152,12 @@ html {
       <h3>Pomożemy Ci go rozwiązać!</h3>
       <p>Skontaktuj się z nami i umów profesjonalny serwis okien oraz drzwi balkonowych we Wrocławiu i okolicach.</p>
       <a href="tel:+48603939032">Zadzwoń: +48 603 939 032</a>
+      <div class="contact-channels">
+        <a href="https://wa.me/48603939032">WhatsApp</a>
+        <a href="https://m.me/OknoFix.Wroclaw">Messenger</a>
+        <a href="https://www.facebook.com/OknoFix.Wroclaw/">Facebook</a>
+      </div>
+      <a class="contact-email" href="mailto:oknofixwro@gmail.com">oknofixwro@gmail.com</a>
     </div>
     <img class="section-photo" src="oknofix-wizyta-serwisowa.jpg" alt="Serwisant rozmawia z klientką przy oknie" width="1536" height="1024" loading="lazy" decoding="async">
   </div>
